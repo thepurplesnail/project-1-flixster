@@ -1,14 +1,20 @@
 package com.example.flixster
 
+import android.os.Parcelable
+import kotlinx.parcelize.IgnoredOnParcel
+import kotlinx.parcelize.Parcelize
 import org.json.JSONArray
 
 // Movie data class for storing each item from input JSON array
+@Parcelize
 data class Movie (
     val movieId: Int,
     private val posterPath: String,
     val title: String,
-    val overview: String
-) {
+    val overview: String,
+    val voteAverage: Double
+) : Parcelable {
+    @IgnoredOnParcel
     val posterImageUrl = "https://image.tmdb.org/t/p/w342/$posterPath"
 
     companion object {
@@ -24,7 +30,8 @@ data class Movie (
                         movieJson.getInt("id"),
                         movieJson.getString("poster_path"),
                         movieJson.getString("title"),
-                        movieJson.getString("overview")
+                        movieJson.getString("overview"),
+                        movieJson.getDouble("vote_average")
                     )
                 )
             }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DetailActivity">
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"/>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart = "8dp"
+        android:layout_marginTop = "8dp"
+        android:textAppearance = "@style/TextAppearance.AppCompat.Display1"
+        android:text="Scream" />
+
+    <RatingBar
+        android:id="@+id/rbVoteAverage"
+        style = "@style/Widget.AppCompat.RatingBar.Indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd = "8dp"
+        android:isIndicator="true"
+        android:rating = "6.9"
+        android:numStars="10"
+        android:stepSize = "0.5"
+        />
+
+    <TextView
+        android:id="@+id/tvOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd = "8dp"
+        android:text= "@string/twenty_five_years_after_a_streak_of_brutal_murders_shocked_the_quiet_town_of_woodsboro_a_new_killer_has_donned_the_ghostface_mask_and_begins_targeting_a_group_of_teenagers_to_resurrect_secrets_from_the_town_s_deadly_past" />
+</LinearLayout>
